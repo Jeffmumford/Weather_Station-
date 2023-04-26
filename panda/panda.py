@@ -1,27 +1,22 @@
 import pandas as pd
-import matplotlib.pyplot as plt
+from helpers import *
 
+
+#FIXME NEED TO IMPORT THE CONSTANT FOR THE DATA.CSV FILE FROM GET_WEATHER.VARIABLES to use instead of actual file name
 #creates the dataset
-df = pd.read_csv('data.csv')
+df = create_data_frame('data.csv')
 
 #print all data
+print("All data")
 print(df)
 
-
-
-
-#plots a graph - NOT CURRENTLY USED
-#df.plot()
-#plt.show()
-
-#print by date
-#start_date = '2023-04-20'
-#end_date = '2023-04-21'
-#df2 = df.loc[df['Date'].between(start_date,end_date)]
-
-#create new data frame describing the one passed in as df
-
+#print by date - commented out for now
+#start_date = '2023-04-25'
+#end_date = '2023-04-25'
+#df2 = select_by_date_range(start_date, end_date, df)
 #print(df2)
 
+
+#create new data frame describing the one passed in as df
 df3 = df.describe()
 print(df3)

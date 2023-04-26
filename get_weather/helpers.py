@@ -23,7 +23,7 @@ def check_for_file(csv_file):
     
     if not check_file:
         #create the headers 
-        headers = ['Date', 'Time', 'Temperature', 'Current Condition']
+        headers = ['Date', 'Time', 'Temperature', 'Condition']
         file = open(csv_file, 'a')
         writer = csv.writer(file)
         writer.writerow(headers)
