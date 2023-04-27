@@ -1,10 +1,11 @@
 import pandas as pd
-from helpers import *
+from helpers_panda import *
+from variables import *
 
 
 #FIXME NEED TO IMPORT THE CONSTANT FOR THE DATA.CSV FILE FROM GET_WEATHER.VARIABLES to use instead of actual file name
 #creates the dataset
-df = create_data_frame('data.csv')
+df = create_data_frame(WEATHER_DATA_CSV)
 
 #print all data
 print("All data")
